@@ -32,91 +32,129 @@
 </head>
 <body class="bg-synerg-darker text-gray-100 antialiased overflow-x-hidden">
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 glass-morphism border-b border-gray-800 transition-all duration-300">
+    <!-- Top Header & Search Bar -->
+    <header class="fixed w-full z-50 glass-morphism transition-all duration-300">
+        <!-- Main Top Row -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+            <div class="flex flex-col md:flex-row justify-between items-center py-4 gap-4 md:gap-8">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 w-full md:w-auto justify-between md:justify-start">
+                    <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-synerg-500 rounded-lg flex items-center justify-center shadow-lg shadow-synerg-500/30">
                             <i class="ri-blaze-line text-white text-2xl"></i>
                         </div>
-                        <span class="font-bold text-lg md:text-xl tracking-tight text-white whitespace-nowrap hidden sm:block">Synergetic Solutions <span class="text-sm font-normal text-synerg-400 hidden md:inline-block">(Pvt) Ltd</span></span>
-                        <span class="font-bold text-xl tracking-tight text-white sm:hidden">Synergetic</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-gray-300 hover:text-synerg-500 transition-colors">Home</a>
-                    <a href="products.html" class="nav-link text-gray-300 hover:text-synerg-500 transition-colors">Products</a>
-                    <a href="about.html" class="nav-link text-synerg-500 font-semibold transition-colors">About</a>
-                    <a href="contact.html" class="nav-link text-gray-300 hover:text-synerg-500 transition-colors">Contact</a>
-                    <a href="contact.html" class="bg-synerg-600 hover:bg-synerg-500 text-white px-6 py-2.5 rounded-full font-medium transition-all hover-glow shadow-lg shadow-synerg-500/20 whitespace-nowrap">
-                        Get in Touch
-                    </a>
-                </div>
-                <!-- Mobile button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <div class="flex flex-col">
+                            <span class="font-bold text-xl tracking-tight text-white leading-none">Synergetic Solutions</span>
+                            <span class="text-xs text-synerg-400 font-medium tracking-wide">(Pvt) Ltd</span>
+                        </div>
+                    </div>
+                    <!-- Mobile button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
                         <i class="ri-menu-line text-2xl"></i>
                     </button>
+                </a>
+                
+                <!-- Search Bar (Center) -->
+                <div class="hidden md:block flex-1 max-w-xl relative w-full">
+                    <input type="text" class="w-full bg-synerg-dark border border-gray-700 rounded-md py-2.5 pl-4 pr-12 text-white text-sm focus:outline-none focus:border-synerg-500 focus:ring-1 focus:ring-synerg-500 transition-colors" placeholder="Search for Laptops, Desktops, Servers, Brands...">
+                    <button class="absolute right-0 top-0 h-full px-4 text-gray-400 hover:text-white bg-gray-800 rounded-r-md border-y border-r border-gray-700 hover:bg-synerg-600 hover:border-synerg-600 transition-colors">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </div>
+
+                <!-- Call & WhatsApp (Right) -->
+                <div class="hidden md:flex items-center gap-6 flex-shrink-0">
+                    <a href="tel:0719320400" class="flex items-center gap-3 text-white group">
+                        <div class="w-10 h-10 rounded-full bg-synerg-500/10 flex items-center justify-center text-synerg-500 group-hover:bg-synerg-500 group-hover:text-white transition-all">
+                            <i class="ri-phone-fill text-lg"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Call Support</span>
+                            <span class="font-bold text-sm">071 932 0400</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/94719320400" target="_blank" class="flex items-center gap-2 bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white px-4 py-2 rounded-md font-medium transition-all border border-[#25D366]/20 shadow-lg shadow-[#25D366]/5">
+                        <i class="ri-whatsapp-line text-xl"></i> WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-synerg-dark border-t border-gray-800">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Home</a>
-                <a href="products.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Products</a>
-                <a href="about.html" class="block px-3 py-2 text-synerg-500 font-medium">About</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Contact</a>
+        
+        <!-- Navigation Menu Row -->
+        <div class="hidden md:block border-t border-gray-800/60 bg-synerg-dark/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-8 py-3">
+                    <a href="index.html" class="nav-link text-gray-300 hover:text-synerg-500 text-sm uppercase tracking-wide transition-colors">Home</a>
+                    <a href="products.html" class="nav-link text-gray-300 hover:text-synerg-500 text-sm uppercase tracking-wide transition-colors">Products</a>
+                    <a href="about.html" class="nav-link text-synerg-500 font-semibold text-sm uppercase tracking-wide transition-colors flex items-center gap-1">About Us <i class="ri-arrow-down-s-line"></i></a>
+                    <a href="services.html" class="nav-link text-gray-300 hover:text-synerg-500 text-sm uppercase tracking-wide transition-colors">Services</a>
+                    <a href="contact.html" class="nav-link text-gray-300 hover:text-synerg-500 text-sm uppercase tracking-wide transition-colors">Contact</a>
+                </div>
             </div>
         </div>
-    </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-synerg-dark border-t border-gray-800">
+            <div class="p-4 space-y-4">
+                <div class="flex relative w-full mb-4">
+                    <input type="text" class="w-full bg-synerg-darker border border-gray-700 rounded-md py-2 pl-4 pr-10 text-white text-sm" placeholder="Search...">
+                    <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"><i class="ri-search-line"></i></button>
+                </div>
+                <div class="space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-gray-300 hover:bg-gray-800 rounded-md">Home</a>
+                    <a href="products.html" class="block px-3 py-2 text-gray-300 hover:bg-gray-800 rounded-md">Products</a>
+                    <a href="about.html" class="block px-3 py-2 text-synerg-500 font-medium rounded-md">About Us</a>
+                    <a href="services.html" class="block px-3 py-2 text-gray-300 hover:bg-gray-800 rounded-md">Services</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:bg-gray-800 rounded-md">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Page Header -->
-    <div class="pt-32 pb-16 bg-synerg-dark border-b border-gray-800 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('assets/images/hero_bg.png')] bg-cover bg-center opacity-10"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-synerg-dark to-transparent"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto fade-up">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">About <span class="text-gradient">Synergetic</span></h1>
-                <p class="text-xl text-gray-400">
-                    Trusted provider of original Laptops, Desktops, Printers, Network Equipments and Supplies since 2010.
-                </p>
+    <div class="pt-40 pb-12 bg-synerg-dark border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-2 text-gray-400 text-sm mb-4">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <i class="ri-arrow-right-s-line"></i>
+                <span class="text-synerg-500">About Us</span>
             </div>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Company Overview</h1>
+            <p class="text-gray-400 max-w-2xl text-lg">Leading the market in enterprise IT provision since our inception, empowering businesses across Sri Lanka.</p>
         </div>
     </div>
 
-    <!-- Story Section -->
+    <!-- Company Intro -->
     <section class="py-20 bg-synerg-darker">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="w-full lg:w-1/2 fade-up">
-                    <div class="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
-                        <img src="assets/images/hero_bg.png" alt="Our Store" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 border-2 border-synerg-500/20 rounded-2xl"></div>
-                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-synerg-500 rounded-full blur-3xl opacity-30"></div>
-                    </div>
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div class="w-full lg:w-1/2 fade-up relative">
+                    <div class="absolute -top-4 -left-4 w-32 h-32 bg-synerg-500 rounded-full blur-3xl opacity-20"></div>
+                    <img src="assets/images/hero_bg.png" alt="Company HQ" class="rounded-xl shadow-2xl relative z-10 w-full object-cover aspect-video border border-gray-800">
                 </div>
                 
-                <div class="w-full lg:w-1/2 fade-up" style="transition-delay: 200ms;">
-                    <h2 class="text-sm font-bold tracking-widest text-synerg-500 uppercase mb-3">Our Story</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold mb-6">Driven By Innovation & Excellence</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Synergetic Solutions (Pvt) Ltd is Sri Lanka's premier destination for comprehensive IT equipment sales. We bridge the gap between world-class technology manufacturers and local consumers by providing top-tier solutions ranging from workstations to networking gear.
+                <div class="w-full lg:w-1/2 fade-up" style="transition-delay: 100ms;">
+                    <span class="text-sm font-bold tracking-widest text-synerg-500 uppercase mb-3 block">Who We Are</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Your Dedicated Enterprise IT Partner</h2>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-light border-l-2 border-synerg-500 pl-4">
+                        Synergetic Solutions (Pvt) Ltd has emerged as a frontrunner in delivering state-of-the-art technological hardware, networking solutions, and robust technical support services in Sri Lanka.
                     </p>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
-                        We are authorized retailers and experts in top global brands including HP, DELL, LENOVO, ASUS, ACER, CANON, TOSHIBA, and DINTEC. Furthermore, we are leaders in consumable supplies, providing both Original components (HP, Epson, Canon) and highly reliable Compatible supplies (Eco Plus, Asta) ensuring our clients are always running seamlessly.
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+                        Our extensive partnerships with global OEM tier-1 manufacturers — including HP, DELL, LENOVO, ASUS, and CANON — guarantee that our corporate clients receive authentic, warranty-backed equipment. Whether deploying massive workstation arrays or sourcing intricate compatible network accessories (Asta/Eco Plus), we ensure absolute reliability.
                     </p>
-                    
-                    <div class="grid grid-cols-2 gap-6 border-t border-gray-800 pt-8">
+                    <div class="flex gap-8 border-t border-gray-800 pt-6">
                         <div>
-                            <span class="block text-4xl font-bold text-white mb-2">10+</span>
-                            <span class="text-sm tracking-wider text-synerg-500 font-bold uppercase">Years Experience</span>
+                            <span class="block text-3xl font-bold text-white mb-1">10+</span>
+                            <span class="text-xs text-gray-500 uppercase font-semibold">Years Experience</span>
                         </div>
                         <div>
-                            <span class="block text-4xl font-bold text-white mb-2">Top</span>
-                            <span class="text-sm tracking-wider text-synerg-500 font-bold uppercase">Brand Partnerships</span>
+                            <span class="block text-3xl font-bold text-white mb-1">Top</span>
+                            <span class="text-xs text-gray-500 uppercase font-semibold">Global Brands</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold text-white mb-1">100%</span>
+                            <span class="text-xs text-gray-500 uppercase font-semibold">Client Support</span>
                         </div>
                     </div>
                 </div>
@@ -124,110 +162,164 @@
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section class="py-20 bg-synerg-dark border-y border-gray-800">
+    <!-- Mission & Vision -->
+    <section class="py-16 bg-synerg-dark border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold">Our Core Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-up">
+                
+                <div class="card-glass p-10 rounded-xl relative overflow-hidden group">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-synerg-500/10 rounded-bl-full group-hover:bg-synerg-500/20 transition-colors"></div>
+                    <i class="ri-focus-2-line text-4xl text-synerg-500 mb-6 block relative z-10"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Our Mission</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed relative z-10">
+                        To empower local enterprises by providing unfettered access to premium global IT hardware, coupled with uncompromising technical support and structured network solutions that drive unhindered operational growth.
+                    </p>
+                </div>
+
+                <div class="card-glass p-10 rounded-xl relative overflow-hidden group">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-synerg-500/10 rounded-bl-full group-hover:bg-synerg-500/20 transition-colors"></div>
+                    <i class="ri-eye-line text-4xl text-synerg-500 mb-6 block relative z-10"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Our Vision</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed relative z-10">
+                        To be universally recognized as the bedrock of Sri Lanka’s corporate IT infrastructure—the most trusted name associated with reliability, premium brands, and seamless digital transformation.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-synerg-darker border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-up">
+                <span class="text-sm font-bold tracking-widest text-synerg-500 uppercase mb-3 block">Our Advantages</span>
+                <h3 class="text-3xl md:text-4xl font-bold">Why Choose Us</h3>
+                <div class="h-1 w-20 bg-synerg-500 mt-4 rounded mx-auto"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Value 1 -->
-                <div class="card-glass p-8 rounded-2xl text-center fade-up" style="transition-delay: 100ms;">
-                    <div class="w-16 h-16 bg-synerg-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="ri-computer-line text-3xl text-synerg-500"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 text-white">Full IT Solutions</h4>
-                    <p class="text-gray-400">From high-end laptops and desktops to robust network equipments and enterprise scanners.</p>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
                 
-                <!-- Value 2 -->
-                <div class="card-glass p-8 rounded-2xl text-center fade-up" style="transition-delay: 200ms;">
-                    <div class="w-16 h-16 bg-synerg-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="ri-printer-line text-3xl text-synerg-500"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 text-white">Total Print Supplies</h4>
-                    <p class="text-gray-400">Complete range of printers alongside original (HP/Epson) and compatible (Eco Plus/Asta) Toners and Inks.</p>
+                <div class="bg-synerg-dark border border-gray-800 p-8 text-center rounded-lg hover:border-synerg-500/50 transition-colors shadow">
+                    <i class="ri-customer-service-2-fill text-4xl text-synerg-500 mb-4 block"></i>
+                    <h4 class="font-bold text-white mb-3 text-lg">Reliable Support</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">24/7 technical hotline and rapid on-site issue resolution from our trained experts.</p>
                 </div>
-                
-                <!-- Value 3 -->
-                <div class="card-glass p-8 rounded-2xl text-center fade-up" style="transition-delay: 300ms;">
-                    <div class="w-16 h-16 bg-synerg-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="ri-group-fill text-3xl text-synerg-500"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 text-white">Trusted Support</h4>
-                    <p class="text-gray-400">Your operational success is our priority. We tailor solutions to exact client needs.</p>
+
+                <div class="bg-synerg-dark border border-gray-800 p-8 text-center rounded-lg hover:border-synerg-500/50 transition-colors shadow">
+                    <i class="ri-building-4-fill text-4xl text-synerg-500 mb-4 block"></i>
+                    <h4 class="font-bold text-white mb-3 text-lg">Enterprise Solutions</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Hardware and networking matched exactly to the rigorous demands of modern businesses.</p>
                 </div>
+
+                <div class="bg-synerg-dark border border-gray-800 p-8 text-center rounded-lg hover:border-synerg-500/50 transition-colors shadow">
+                    <i class="ri-truck-fill text-4xl text-synerg-500 mb-4 block"></i>
+                    <h4 class="font-bold text-white mb-3 text-lg">Fast Delivery</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Streamlined supply chain logistics ensuring timely deployment of critical equipment.</p>
+                </div>
+
+                <div class="bg-synerg-dark border border-gray-800 p-8 text-center rounded-lg hover:border-synerg-500/50 transition-colors shadow">
+                    <i class="ri-money-dollar-circle-fill text-4xl text-synerg-500 mb-4 block"></i>
+                    <h4 class="font-bold text-white mb-3 text-lg">Competitive Pricing</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Direct importer and distributor rates ensuring cost-efficiency on large-scale rollouts.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-synerg-dark pt-16 pb-8 border-t border-gray-800">
+    <!-- Support CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-synerg-900 to-synerg-600 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8 fade-up">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Get a Quotation Today.</h2>
+                <p class="text-synerg-100 text-lg">Speak directly with our enterprise sales consultants.</p>
+            </div>
+            <a href="contact.html" class="bg-white text-synerg-700 hover:bg-gray-100 px-8 py-4 rounded font-bold text-lg shadow-xl hover:scale-105 transition-all whitespace-nowrap">
+                Contact Sales
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Cleanup Into Columns -->
+    <footer class="bg-gray-900 pt-16 pb-8 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="col-span-1 md:col-span-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Col 1: Company -->
+                <div>
                     <a href="index.html" class="flex items-center gap-2 mb-6">
                         <div class="w-8 h-8 bg-synerg-500 rounded flex items-center justify-center">
                             <i class="ri-blaze-line text-white"></i>
                         </div>
-                        <span class="font-bold text-xl text-white">Synergetic Solutions</span>
+                        <span class="font-bold text-xl text-white">Synergetic</span>
                     </a>
-                    <p class="text-gray-400 leading-relaxed mb-6">
-                        The ultimate destination for Laptops, Desktops, Printers, Scanners, Network Equipments, and consumable supplies from top global brands.
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        The ultimate destination for Laptops, Desktops, Servers, Printers, Network Equipments, and consumable supplies from top global brands.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-synerg-500 hover:text-white transition-all"><i class="ri-facebook-fill"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-synerg-500 hover:text-white transition-all"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-synerg-500 hover:text-white transition-all"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-synerg-500 hover:text-white transition-all"><i class="ri-linkedin-fill"></i></a>
                     </div>
                 </div>
                 
+                <!-- Col 2: Products -->
                 <div>
-                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Home</a></li>
-                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Products Catalog</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-synerg-500 transition-colors">About Us</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-white font-bold mb-6">Categories</h4>
-                    <ul class="space-y-3">
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Products</h4>
+                    <ul class="space-y-3 text-sm">
                         <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Laptops & Desktops</a></li>
-                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Printers & Scanners</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Servers & Storage</a></li>
                         <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Network Equipments</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Printers & Scanners</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">CCTV & Accessories</a></li>
                         <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Toners, Ribbons & Ink</a></li>
                     </ul>
                 </div>
-                
+
+                <!-- Col 3: Services -->
                 <div>
-                    <h4 class="text-white font-bold mb-6">Contact Info</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-4">
-                            <i class="ri-map-pin-2-fill text-synerg-500 text-xl mt-1"></i>
-                            <span class="text-gray-400">3rd Floor, Sausiri Shopping Complex,<br>High-Level Road, Nugegoda.</span>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="services.html" class="text-gray-400 hover:text-synerg-500 transition-colors">IT Infrastructure</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-synerg-500 transition-colors">AMC Support Contracts</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Network Setup & Wiring</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Security Solutions Installation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 4: Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Contact Info</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="ri-map-pin-2-fill text-synerg-500 mt-1"></i>
+                            <span class="text-gray-400">3rd Floor, Sausiri Shopping Complex, High-Level Road, Nugegoda.</span>
                         </li>
-                        <li class="flex items-center gap-4">
-                            <i class="ri-phone-fill text-synerg-500 text-xl"></i>
-                            <span class="text-gray-400">071 932 0400 (Mobile)</span>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-phone-fill text-synerg-500"></i>
+                            <span class="text-gray-400">Mobile: 071 932 0400</span>
                         </li>
-                        <li class="flex items-center gap-4">
-                            <i class="ri-phone-fill text-synerg-500 text-xl"></i>
-                            <span class="text-gray-400">011 293 20400 (Land)</span>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-customer-service-2-fill text-synerg-500"></i>
+                            <span class="text-gray-400">Land: 011 293 20400</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-mail-fill text-synerg-500"></i>
+                            <span class="text-gray-400">info@synergetic.lk</span>
                         </li>
                     </ul>
                 </div>
+
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
-                <p class="text-gray-500 text-sm">
+                <p class="text-gray-500 text-xs">
                     &copy; 2026 Synergetic Solutions (Pvt) Ltd. All rights reserved.
                 </p>
-                <div class="flex gap-4 mt-4 md:mt-0 text-sm">
+                <div class="flex gap-4 mt-4 md:mt-0 text-xs">
                     <a href="#" class="text-gray-500 hover:text-white">Privacy Policy</a>
-                    <a href="#" class="text-gray-500 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white">Terms of Use</a>
                 </div>
             </div>
         </div>

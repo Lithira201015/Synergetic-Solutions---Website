@@ -32,129 +32,164 @@
 </head>
 <body class="bg-synerg-darker text-gray-100 antialiased overflow-x-hidden">
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 glass-morphism border-b border-gray-800 transition-all duration-300">
+    <!-- Top Header & Search Bar -->
+    <header class="fixed w-full z-50 glass-morphism transition-all duration-300">
+        <!-- Main Top Row -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+            <div class="flex flex-col md:flex-row justify-between items-center py-4 gap-4 md:gap-8">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 w-full md:w-auto justify-between md:justify-start">
+                    <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-synerg-500 rounded-lg flex items-center justify-center shadow-lg shadow-synerg-500/30">
                             <i class="ri-blaze-line text-white text-2xl"></i>
                         </div>
-                        <span class="font-bold text-lg md:text-xl tracking-tight text-white whitespace-nowrap hidden sm:block">Synergetic Solutions <span class="text-sm font-normal text-synerg-400 hidden md:inline-block">(Pvt) Ltd</span></span>
-                        <span class="font-bold text-xl tracking-tight text-white sm:hidden">Synergetic</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-gray-300 hover:text-synerg-500 transition-colors">Home</a>
-                    <a href="products.html" class="nav-link text-synerg-500 font-semibold transition-colors">Products</a>
-                    <a href="about.html" class="nav-link text-gray-300 hover:text-synerg-500 transition-colors">About</a>
-                    <a href="contact.html" class="nav-link text-gray-300 hover:text-synerg-500 transition-colors">Contact</a>
-                    <a href="contact.html" class="bg-synerg-600 hover:bg-synerg-500 text-white px-6 py-2.5 rounded-full font-medium transition-all hover-glow shadow-lg shadow-synerg-500/20 whitespace-nowrap">
-                        Shop Now
-                    </a>
-                </div>
-                <!-- Mobile button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <div class="flex flex-col">
+                            <span class="font-bold text-xl tracking-tight text-white leading-none">Synergetic Solutions</span>
+                            <span class="text-xs text-synerg-400 font-medium tracking-wide">(Pvt) Ltd</span>
+                        </div>
+                    </div>
+                    <!-- Mobile button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
                         <i class="ri-menu-line text-2xl"></i>
                     </button>
+                </a>
+                
+                <!-- Search Bar (Center) -->
+                <div class="hidden md:block flex-1 max-w-xl relative w-full">
+                    <input type="text" class="w-full bg-synerg-dark border border-gray-700 rounded-md py-2.5 pl-4 pr-12 text-white text-sm focus:outline-none focus:border-synerg-500 focus:ring-1 focus:ring-synerg-500 transition-colors" placeholder="Search for Laptops, Desktops, Servers, Brands...">
+                    <button class="absolute right-0 top-0 h-full px-4 text-gray-400 hover:text-white bg-gray-800 rounded-r-md border-y border-r border-gray-700 hover:bg-synerg-600 hover:border-synerg-600 transition-colors">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </div>
+
+                <!-- Call & WhatsApp (Right) -->
+                <div class="hidden md:flex items-center gap-6 flex-shrink-0">
+                    <a href="tel:0719320400" class="flex items-center gap-3 text-white group">
+                        <div class="w-10 h-10 rounded-full bg-synerg-500/10 flex items-center justify-center text-synerg-500 group-hover:bg-synerg-500 group-hover:text-white transition-all">
+                            <i class="ri-phone-fill text-lg"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Call Support</span>
+                            <span class="font-bold text-sm">071 932 0400</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/94719320400" target="_blank" class="flex items-center gap-2 bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white px-4 py-2 rounded-md font-medium transition-all border border-[#25D366]/20 shadow-lg shadow-[#25D366]/5">
+                        <i class="ri-whatsapp-line text-xl"></i> WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-synerg-dark border-t border-gray-800">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Home</a>
-                <a href="products.html" class="block px-3 py-2 text-synerg-500 font-medium">Products</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">About</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Contact</a>
+        
+        <!-- Navigation Menu Row -->
+        <div class="hidden md:block border-t border-gray-800/60 bg-synerg-dark/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-8 py-3">
+                    <a href="index.html" class="nav-link text-gray-300 hover:text-synerg-500 text-sm uppercase tracking-wide transition-colors">Home</a>
+                    <a href="products.html" class="nav-link text-synerg-500 font-semibold text-sm uppercase tracking-wide transition-colors flex items-center gap-1">Products <i class="ri-arrow-down-s-line"></i></a>
+                    <a href="about.html" class="nav-link text-gray-300 hover:text-synerg-500 text-sm uppercase tracking-wide transition-colors">About Us</a>
+                    <a href="services.html" class="nav-link text-gray-300 hover:text-synerg-500 text-sm uppercase tracking-wide transition-colors">Services</a>
+                    <a href="contact.html" class="nav-link text-gray-300 hover:text-synerg-500 text-sm uppercase tracking-wide transition-colors">Contact</a>
+                </div>
             </div>
         </div>
-    </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-synerg-dark border-t border-gray-800">
+            <div class="p-4 space-y-4">
+                <div class="flex relative w-full mb-4">
+                    <input type="text" class="w-full bg-synerg-darker border border-gray-700 rounded-md py-2 pl-4 pr-10 text-white text-sm" placeholder="Search...">
+                    <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"><i class="ri-search-line"></i></button>
+                </div>
+                <div class="space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-gray-300 hover:bg-gray-800 rounded-md">Home</a>
+                    <a href="products.html" class="block px-3 py-2 text-synerg-500 font-medium rounded-md">Products</a>
+                    <a href="about.html" class="block px-3 py-2 text-gray-300 hover:bg-gray-800 rounded-md">About Us</a>
+                    <a href="services.html" class="block px-3 py-2 text-gray-300 hover:bg-gray-800 rounded-md">Services</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:bg-gray-800 rounded-md">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Page Header -->
-    <div class="pt-32 pb-16 bg-synerg-dark border-b border-gray-800">
+    <div class="pt-40 pb-12 bg-synerg-dark border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto fade-up">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Our <span class="text-gradient">Products</span></h1>
-                <p class="text-xl text-gray-400">
-                    Discover enterprise-grade Laptops, Desktops, Printers, Network Equipments, and Consumables.
-                </p>
+            <div class="flex items-center gap-2 text-gray-400 text-sm mb-4">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <i class="ri-arrow-right-s-line"></i>
+                <span class="text-synerg-500">Products</span>
             </div>
+            <h1 class="text-3xl font-bold mb-2">Enterprise IT Catalog</h1>
+            <p class="text-gray-400">Discover premium hardware from top global brands.</p>
         </div>
     </div>
 
     <!-- Layout Container -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col lg:flex-row gap-8">
         
         <!-- Sidebar Filter -->
         <aside class="w-full lg:w-1/4">
-            <div class="card-glass p-6 rounded-2xl sticky top-28 fade-up">
-                <h4 class="text-xl font-bold mb-6 flex items-center gap-2">
-                    <i class="ri-filter-3-line text-synerg-500"></i> Filters
+            <div class="bg-synerg-dark border border-gray-800 p-6 rounded-lg sticky top-36 shadow-lg">
+                <h4 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-gray-700 pb-4 text-white">
+                    <i class="ri-filter-3-line text-synerg-500 text-xl"></i> Filters
                 </h4>
                 
                 <div class="mb-8">
-                    <h5 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Categories</h5>
+                    <h5 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Categories</h5>
                     <ul class="space-y-3">
                         <li>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" checked class="w-5 h-5 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500 transition duration-200">
-                                <span class="text-gray-300 group-hover:text-synerg-400 transition-colors">Laptops & Desktops</span>
+                                <input type="checkbox" checked class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500">
+                                <span class="text-gray-300 text-sm group-hover:text-white">Laptops (24)</span>
                             </label>
                         </li>
                         <li>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" checked class="w-5 h-5 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500 transition duration-200">
-                                <span class="text-gray-300 group-hover:text-synerg-400 transition-colors">Printers & Scanners</span>
+                                <input type="checkbox" checked class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500">
+                                <span class="text-gray-300 text-sm group-hover:text-white">Desktops (18)</span>
                             </label>
                         </li>
                         <li>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" checked class="w-5 h-5 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500 transition duration-200">
-                                <span class="text-gray-300 group-hover:text-synerg-400 transition-colors">Network Equipments</span>
+                                <input type="checkbox" class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500">
+                                <span class="text-gray-300 text-sm group-hover:text-white">Servers (8)</span>
                             </label>
                         </li>
                         <li>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" checked class="w-5 h-5 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500 transition duration-200">
-                                <span class="text-gray-300 group-hover:text-synerg-400 transition-colors">Toners, Ribbons & Ink</span>
+                                <input type="checkbox" checked class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500">
+                                <span class="text-gray-300 text-sm group-hover:text-white">Networking (32)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500">
+                                <span class="text-gray-300 text-sm group-hover:text-white">CCTV (10)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500">
+                                <span class="text-gray-300 text-sm group-hover:text-white">Toners & Ink (45)</span>
                             </label>
                         </li>
                     </ul>
                 </div>
                 
-                <div class="mb-8">
-                    <h5 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Equipment Brands</h5>
+                <div class="mb-4">
+                    <h5 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Brands</h5>
                     <ul class="space-y-3">
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-synerg-400">HP</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-synerg-400">DELL</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-synerg-400">LENOVO</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-synerg-400">ASUS</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-synerg-400">ACER</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-synerg-400">CANON</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-synerg-400">TOSHIBA</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-synerg-400">DINTEC</span></label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-white">HP</span></label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-white">DELL</span></label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-white">LENOVO</span></label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-white">ASUS</span></label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-white">CANON</span></label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-600 bg-synerg-darker text-synerg-500 focus:ring-synerg-500"><span class="text-gray-300 text-sm group-hover:text-white">EPSON</span></label></li>
                     </ul>
                 </div>
 
-                <div class="mb-8">
-                    <h5 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Consumable Brands</h5>
-                    <p class="text-xs text-synerg-500 mb-2">Original</p>
-                    <ul class="space-y-2 mb-3">
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500"><span class="text-gray-300 text-sm">HP</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500"><span class="text-gray-300 text-sm">Epson</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500"><span class="text-gray-300 text-sm">Canon</span></label></li>
-                    </ul>
-                    <p class="text-xs text-synerg-500 mb-2">Compatible</p>
-                    <ul class="space-y-2">
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500"><span class="text-gray-300 text-sm">Eco Plus</span></label></li>
-                        <li><label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" class="w-4 h-4 rounded border-gray-700 bg-synerg-darker text-synerg-500"><span class="text-gray-300 text-sm">Asta</span></label></li>
-                    </ul>
-                </div>
-
-                <button class="w-full bg-synerg-800 text-white font-medium py-3 rounded-lg hover:bg-synerg-700 border border-synerg-600/30 transition-all">
+                <button class="w-full bg-synerg-800 text-white font-medium py-3 rounded-lg hover:bg-synerg-700 border border-synerg-600/30 transition-all mt-4">
                     Apply Filters
                 </button>
             </div>
@@ -162,207 +197,205 @@
 
         <!-- Product Grid -->
         <main class="w-full lg:w-3/4">
-            <div class="flex justify-between items-center mb-8 fade-up">
-                <p class="text-gray-400">Showing <span class="text-white font-bold">4</span> premium items</p>
-                <div class="flex items-center gap-3">
-                    <span class="text-sm text-gray-400">Sort by:</span>
-                    <select class="bg-synerg-dark border border-gray-700 text-white text-sm rounded-lg focus:ring-synerg-500 focus:border-synerg-500 block p-2.5 outline-none">
+            
+            <!-- Sorting Header -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-synerg-dark border border-gray-800 p-4 rounded-lg mb-8 fade-up shadow-sm">
+                <p class="text-gray-400 text-sm mb-4 sm:mb-0">Showing <span class="text-white font-bold">1-4</span> of 142 items</p>
+                <div class="flex items-center gap-3 w-full sm:w-auto">
+                    <span class="text-sm text-gray-400 whitespace-nowrap">Sort by:</span>
+                    <select class="w-full sm:w-auto bg-synerg-darker border border-gray-700 text-white text-sm rounded focus:outline-none focus:border-synerg-500 p-2 py-1.5 focus:ring-1 focus:ring-synerg-500 transition-colors">
                         <option>Featured Products</option>
                         <option>Price: Low to High</option>
                         <option>Price: High to Low</option>
-                        <option>Newest Arrivals</option>
+                        <option>New Arrivals</option>
                     </select>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- E-commerce Style Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Product 1 -->
-                <div class="card-glass rounded-2xl overflow-hidden group fade-up">
-                    <div class="h-64 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-synerg-500/10 opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-300"></div>
-                        <img src="assets/images/premium_laptop.png" alt="HP EliteBook" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 z-20">
-                            <span class="bg-synerg-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">HP</span>
+                <!-- Product Card -->
+                <div class="bg-synerg-dark border border-gray-800 rounded-lg overflow-hidden flex flex-col group hover:border-synerg-500/50 transition-all shadow-lg fade-up relative">
+                    <div class="h-56 overflow-hidden relative bg-white flex items-center justify-center">
+                        <img src="assets/images/premium_laptop.png" alt="Laptop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 flex gap-2">
+                            <span class="bg-synerg-500 text-white text-[10px] uppercase font-bold px-2 py-1 rounded">HP</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold mb-1 hover:text-synerg-400 cursor-pointer transition-colors">HP EliteBook 1040 G9</h3>
-                                <p class="text-sm text-gray-400">Premium Business Laptop</p>
-                            </div>
-                        </div>
-                        <ul class="space-y-2 mb-6 text-sm text-gray-400 border-t border-gray-800 pt-4">
-                            <li class="flex items-center gap-2"><i class="ri-cpu-line text-synerg-500"></i> Intel Core i7 12th Gen</li>
-                            <li class="flex items-center gap-2"><i class="ri-ram-2-line text-synerg-500"></i> 16GB RAM / 512GB SSD</li>
+                    <div class="p-5 flex-1 flex flex-col bg-synerg-dark border-t border-gray-800">
+                        <h3 class="font-bold text-white mb-1 hover:text-synerg-400 cursor-pointer">HP EliteBook 1040 G9</h3>
+                        <p class="text-xs text-gray-400 mb-4">Enterprise standard business mobility.</p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6 flex-1">
+                            <li class="flex items-center"><i class="ri-cpu-line text-synerg-500 mr-2 text-sm"></i> Intel Core i7 12th Gen</li>
+                            <li class="flex items-center"><i class="ri-ram-2-line text-synerg-500 mr-2 text-sm"></i> 16GB LPDDR5 RAM</li>
+                            <li class="flex items-center"><i class="ri-hard-drive-2-line text-synerg-500 mr-2 text-sm"></i> 512GB NVMe SSD</li>
                         </ul>
-                        <div class="flex justify-between items-center mt-6">
-                            <button class="bg-synerg-600 hover:bg-synerg-500 text-white px-4 py-2 rounded-lg text-sm w-full transition-all">Request Quote</button>
-                        </div>
+                        <button class="w-full bg-synerg-600 hover:bg-synerg-500 text-white py-2.5 rounded font-medium transition-colors text-sm flex items-center justify-center gap-2 mt-auto shadow">
+                            <i class="ri-send-plane-line"></i> Inquire Now
+                        </button>
                     </div>
                 </div>
 
-                <!-- Product 2 -->
-                <div class="card-glass rounded-2xl overflow-hidden group fade-up" style="transition-delay: 100ms;">
-                    <div class="h-64 overflow-hidden relative bg-synerg-darker flex items-center justify-center p-4">
-                        <div class="absolute inset-0 bg-synerg-500/10 opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-300"></div>
-                        <img src="assets/images/desktop_setup.png" alt="Dell OptiPlex Desktop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 z-20">
-                            <span class="bg-synerg-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">DELL</span>
+                <!-- Product Card -->
+                <div class="bg-synerg-dark border border-gray-800 rounded-lg overflow-hidden flex flex-col group hover:border-synerg-500/50 transition-all shadow-lg fade-up relative" style="transition-delay: 50ms;">
+                    <div class="h-56 overflow-hidden relative bg-gray-900 flex items-center justify-center p-6 bg-synerg-darker">
+                        <img src="assets/images/desktop_setup.png" alt="Desktop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 flex gap-2">
+                            <span class="bg-synerg-500 text-white text-[10px] uppercase font-bold px-2 py-1 rounded">DELL</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold mb-1 hover:text-synerg-400 cursor-pointer transition-colors">Dell OptiPlex 7000</h3>
-                                <p class="text-sm text-gray-400">Enterprise Desktop Workstation</p>
-                            </div>
-                        </div>
-                        <ul class="space-y-2 mb-6 text-sm text-gray-400 border-t border-gray-800 pt-4">
-                            <li class="flex items-center gap-2"><i class="ri-cpu-line text-synerg-500"></i> Intel Core i9</li>
-                            <li class="flex items-center gap-2"><i class="ri-ram-2-line text-synerg-500"></i> 32GB RAM / Dual Monitor Support</li>
+                    <div class="p-5 flex-1 flex flex-col bg-synerg-dark border-t border-gray-800">
+                        <h3 class="font-bold text-white mb-1 hover:text-synerg-400 cursor-pointer">Dell OptiPlex 7000</h3>
+                        <p class="text-xs text-gray-400 mb-4">Reliable commercial desktop systems.</p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6 flex-1">
+                            <li class="flex items-center"><i class="ri-cpu-line text-synerg-500 mr-2 text-sm"></i> Intel Core i9 Processor</li>
+                            <li class="flex items-center"><i class="ri-ram-2-line text-synerg-500 mr-2 text-sm"></i> 32GB DDR5 / 1TB SSD</li>
+                            <li class="flex items-center"><i class="ri-monitor-line text-synerg-500 mr-2 text-sm"></i> Dual 24" Monitors</li>
                         </ul>
-                        <div class="flex justify-between items-center mt-6">
-                            <button class="bg-synerg-600 hover:bg-synerg-500 text-white px-4 py-2 rounded-lg text-sm w-full transition-all">Request Quote</button>
-                        </div>
+                        <button class="w-full bg-synerg-600 hover:bg-synerg-500 text-white py-2.5 rounded font-medium transition-colors text-sm flex items-center justify-center gap-2 mt-auto shadow">
+                            <i class="ri-send-plane-line"></i> Inquire Now
+                        </button>
                     </div>
                 </div>
 
-                <!-- Product 3 -->
-                <div class="card-glass rounded-2xl overflow-hidden group fade-up" style="transition-delay: 200ms;">
-                    <div class="h-64 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-synerg-500/10 opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-300"></div>
-                        <img src="assets/images/networking_gear.png" alt="Network Equipment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 z-20">
-                            <span class="bg-gray-800 border border-gray-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">NETWORK</span>
+                <!-- Product Card -->
+                <div class="bg-synerg-dark border border-gray-800 rounded-lg overflow-hidden flex flex-col group hover:border-synerg-500/50 transition-all shadow-lg fade-up relative" style="transition-delay: 100ms;">
+                    <div class="h-56 overflow-hidden relative bg-white flex items-center justify-center p-4">
+                        <img src="assets/images/networking_gear.png" alt="Networking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 flex gap-2">
+                            <span class="bg-gray-800 border-gray-700 border text-white text-[10px] uppercase font-bold px-2 py-1 rounded">Network</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold mb-1 hover:text-synerg-400 cursor-pointer transition-colors">Enterprise Network Switch</h3>
-                                <p class="text-sm text-gray-400">Managed Gigabit Infrastructure</p>
-                            </div>
-                        </div>
-                        <ul class="space-y-2 mb-6 text-sm text-gray-400 border-t border-gray-800 pt-4">
-                            <li class="flex items-center gap-2"><i class="ri-router-line text-synerg-500"></i> 48 x Gigabit Ports</li>
-                            <li class="flex items-center gap-2"><i class="ri-dashboard-3-line text-synerg-500"></i> High-speed Fiber Uplinks</li>
+                    <div class="p-5 flex-1 flex flex-col bg-synerg-dark border-t border-gray-800">
+                        <h3 class="font-bold text-white mb-1 hover:text-synerg-400 cursor-pointer">Enterprise L3 Switch</h3>
+                        <p class="text-xs text-gray-400 mb-4">Managed 48-port Gigabit routing.</p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6 flex-1">
+                            <li class="flex items-center"><i class="ri-router-line text-synerg-500 mr-2 text-sm"></i> 48 x 10/100/1000 Ports</li>
+                            <li class="flex items-center"><i class="ri-upload-cloud-line text-synerg-500 mr-2 text-sm"></i> 4 x SFP+ 10G Uplinks</li>
+                            <li class="flex items-center"><i class="ri-settings-4-line text-synerg-500 mr-2 text-sm"></i> Advanced Security</li>
                         </ul>
-                        <div class="flex justify-between items-center mt-6">
-                            <button class="bg-synerg-600 hover:bg-synerg-500 text-white px-4 py-2 rounded-lg text-sm w-full transition-all">Request Quote</button>
-                        </div>
+                        <button class="w-full bg-synerg-600 hover:bg-synerg-500 text-white py-2.5 rounded font-medium transition-colors text-sm flex items-center justify-center gap-2 mt-auto shadow">
+                            <i class="ri-send-plane-line"></i> Inquire Now
+                        </button>
                     </div>
                 </div>
-                
-                <!-- Product 4 -->
-                <div class="card-glass rounded-2xl overflow-hidden group fade-up" style="transition-delay: 300ms;">
-                    <div class="h-64 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-synerg-500/10 opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-300"></div>
-                        <img src="assets/images/pc_accessories.png" alt="Consumables" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                <!-- Product Card -->
+                <div class="bg-synerg-dark border border-gray-800 rounded-lg overflow-hidden flex flex-col group hover:border-synerg-500/50 transition-all shadow-lg fade-up relative" style="transition-delay: 150ms;">
+                    <div class="h-56 overflow-hidden relative bg-gray-900 flex items-center justify-center p-2">
+                        <img src="assets/images/pc_accessories.png" alt="Accessories" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 flex gap-2">
+                            <span class="bg-gray-800 border-gray-700 border text-white text-[10px] uppercase font-bold px-2 py-1 rounded">Consumables</span>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold mb-1 hover:text-synerg-400 cursor-pointer transition-colors">Original Toners & Ink</h3>
-                                <p class="text-sm text-gray-400">Genuine & Compatible Consumables</p>
-                            </div>
-                        </div>
-                        <ul class="space-y-2 mb-6 text-sm text-gray-400 border-t border-gray-800 pt-4">
-                            <li class="flex items-center gap-2"><i class="ri-check-line text-synerg-500"></i> Original: HP, Epson, Canon</li>
-                            <li class="flex items-center gap-2"><i class="ri-check-line text-synerg-500"></i> Compatible: Eco Plus, Asta</li>
+                    <div class="p-5 flex-1 flex flex-col bg-synerg-dark border-t border-gray-800">
+                        <h3 class="font-bold text-white mb-1 hover:text-synerg-400 cursor-pointer">Original Toners</h3>
+                        <p class="text-xs text-gray-400 mb-4">Genuine enterprise printing supplies.</p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6 flex-1">
+                            <li class="flex items-center"><i class="ri-drop-line text-synerg-500 mr-2 text-sm"></i> High Yield Capacity</li>
+                            <li class="flex items-center"><i class="ri-shield-check-line text-synerg-500 mr-2 text-sm"></i> Canon / HP / Epson</li>
                         </ul>
-                        <div class="flex justify-between items-center mt-6">
-                            <button class="bg-synerg-600 hover:bg-synerg-500 text-white px-4 py-2 rounded-lg text-sm w-full transition-all">Request Quote</button>
-                        </div>
+                        <button class="w-full bg-synerg-600 hover:bg-synerg-500 text-white py-2.5 rounded font-medium transition-colors text-sm flex items-center justify-center gap-2 mt-auto shadow">
+                            <i class="ri-send-plane-line"></i> Inquire Now
+                        </button>
                     </div>
                 </div>
 
             </div>
-            
-            <!-- Pagination -->
-            <div class="mt-12 flex justify-center fade-up">
-                <nav class="flex items-center gap-2">
-                    <button class="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-700 hover:border-synerg-500 hover:text-synerg-500 transition-colors">
-                        <i class="ri-arrow-left-s-line"></i>
-                    </button>
-                    <button class="w-10 h-10 rounded-lg flex items-center justify-center bg-synerg-500 text-white font-medium">1</button>
-                    <button class="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-700 hover:border-synerg-500 hover:text-synerg-500 transition-colors">2</button>
-                    <button class="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-700 hover:border-synerg-500 hover:text-synerg-500 transition-colors">
-                        <i class="ri-arrow-right-s-line"></i>
-                    </button>
-                </nav>
+
+            <!-- Pagination block -->
+            <div class="mt-10 flex justify-center bg-synerg-dark border border-gray-800 p-2 rounded-lg w-max mx-auto fade-up shadow-sm">
+                <div class="flex items-center gap-1">
+                    <button class="w-8 h-8 rounded flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"><i class="ri-arrow-left-s-line"></i></button>
+                    <button class="w-8 h-8 rounded flex items-center justify-center text-white bg-synerg-500 font-medium">1</button>
+                    <button class="w-8 h-8 rounded flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">2</button>
+                    <button class="w-8 h-8 rounded flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">3</button>
+                    <button class="w-8 h-8 rounded flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"><i class="ri-arrow-right-s-line"></i></button>
+                </div>
             </div>
 
         </main>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-synerg-dark pt-16 pb-8 border-t border-gray-800">
+    <!-- Footer Cleanup Into Columns -->
+    <footer class="bg-gray-900 pt-16 pb-8 border-t border-gray-800 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="col-span-1 md:col-span-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Col 1: Company -->
+                <div>
                     <a href="index.html" class="flex items-center gap-2 mb-6">
                         <div class="w-8 h-8 bg-synerg-500 rounded flex items-center justify-center">
                             <i class="ri-blaze-line text-white"></i>
                         </div>
-                        <span class="font-bold text-xl text-white">Synergetic Solutions</span>
+                        <span class="font-bold text-xl text-white">Synergetic</span>
                     </a>
-                    <p class="text-gray-400 leading-relaxed mb-6">
-                        The ultimate destination for Laptops, Desktops, Printers, Scanners, Network Equipments, and consumable supplies from top global brands.
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        The ultimate destination for Laptops, Desktops, Servers, Printers, Network Equipments, and consumable supplies from top global brands.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-synerg-500 hover:text-white transition-all"><i class="ri-facebook-fill"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-synerg-500 hover:text-white transition-all"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-synerg-500 hover:text-white transition-all"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-synerg-500 hover:text-white transition-all"><i class="ri-linkedin-fill"></i></a>
                     </div>
                 </div>
                 
+                <!-- Col 2: Products -->
                 <div>
-                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Home</a></li>
-                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Products Catalog</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-synerg-500 transition-colors">About Us</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-white font-bold mb-6">Categories</h4>
-                    <ul class="space-y-3">
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Products</h4>
+                    <ul class="space-y-3 text-sm">
                         <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Laptops & Desktops</a></li>
-                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Printers & Scanners</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Servers & Storage</a></li>
                         <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Network Equipments</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Printers & Scanners</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">CCTV & Accessories</a></li>
                         <li><a href="products.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Toners, Ribbons & Ink</a></li>
                     </ul>
                 </div>
-                
+
+                <!-- Col 3: Services -->
                 <div>
-                    <h4 class="text-white font-bold mb-6">Contact Info</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-4">
-                            <i class="ri-map-pin-2-fill text-synerg-500 text-xl mt-1"></i>
-                            <span class="text-gray-400">3rd Floor, Sausiri Shopping Complex,<br>High-Level Road, Nugegoda.</span>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="services.html" class="text-gray-400 hover:text-synerg-500 transition-colors">IT Infrastructure</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-synerg-500 transition-colors">AMC Support Contracts</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Network Setup & Wiring</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-synerg-500 transition-colors">Security Solutions Installation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 4: Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Contact Info</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="ri-map-pin-2-fill text-synerg-500 mt-1"></i>
+                            <span class="text-gray-400">3rd Floor, Sausiri Shopping Complex, High-Level Road, Nugegoda.</span>
                         </li>
-                        <li class="flex items-center gap-4">
-                            <i class="ri-phone-fill text-synerg-500 text-xl"></i>
-                            <span class="text-gray-400">071 932 0400 (Mobile)</span>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-phone-fill text-synerg-500"></i>
+                            <span class="text-gray-400">Mobile: 071 932 0400</span>
                         </li>
-                        <li class="flex items-center gap-4">
-                            <i class="ri-phone-fill text-synerg-500 text-xl"></i>
-                            <span class="text-gray-400">011 293 20400 (Land)</span>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-customer-service-2-fill text-synerg-500"></i>
+                            <span class="text-gray-400">Land: 011 293 20400</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-mail-fill text-synerg-500"></i>
+                            <span class="text-gray-400">info@synergetic.lk</span>
                         </li>
                     </ul>
                 </div>
+
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
-                <p class="text-gray-500 text-sm">
+                <p class="text-gray-500 text-xs">
                     &copy; 2026 Synergetic Solutions (Pvt) Ltd. All rights reserved.
                 </p>
-                <div class="flex gap-4 mt-4 md:mt-0 text-sm">
+                <div class="flex gap-4 mt-4 md:mt-0 text-xs">
                     <a href="#" class="text-gray-500 hover:text-white">Privacy Policy</a>
-                    <a href="#" class="text-gray-500 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white">Terms of Use</a>
                 </div>
             </div>
         </div>
